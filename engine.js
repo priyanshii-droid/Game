@@ -103,11 +103,11 @@ export function getReversePredecessors(targetBoard, rows, cols) {
         }
       } else if (postTapState === TILE_STATE.SAGE) {
         if (r - 1 >= 0) {
-          const topIdx = (r - 1) * cols + col;
+          const topIdx = (r - 1) * cols + c;
           candidate[topIdx] = (candidate[topIdx] + 2) % 3;
         }
         if (r + 1 < rows) {
-          const bottomIdx = (r + 1) * cols + col;
+          const bottomIdx = (r + 1) * cols + c;
           candidate[bottomIdx] = (candidate[bottomIdx] + 2) % 3;
         }
       }
